@@ -1,18 +1,21 @@
 # AGENTS.md
 
-This repository is a designer-led, agent-implemented autobattler design laboratory.
+This repository is a designer-led, agent-implemented TFT design laboratory.
 
 ## Required reading before any code change
 
 1. Read `docs/STATUS.md`.
-2. Read the active milestone in `docs/milestones/`.
-3. Read `docs/ARCHITECTURE.md`.
-4. Read relevant entries in `docs/DECISIONS.md`.
-5. Inspect existing implementation and tests before proposing changes.
+2. Read `docs/ROADMAP.md`.
+3. Read the active milestone in `docs/milestones/`.
+4. Read `docs/PRODUCT_VISION.md`.
+5. Read `docs/ARCHITECTURE.md`.
+6. Read relevant entries in `docs/DECISIONS.md`.
+7. Inspect existing implementation and tests before proposing changes.
 
 ## Operating rules
 
 - The human designer owns product intent, game rules, balance values, and prioritization.
+- This is not a generic autobattler project: the long-term target is a designer-facing lab calibrated against observable TFT behavior.
 - Do not invent or rebalance gameplay values unless explicitly instructed.
 - Do not implement future milestones early.
 - Prefer the smallest change that satisfies the current task.
@@ -30,6 +33,7 @@ This repository is a designer-led, agent-implemented autobattler design laborato
 - Same starting state + same seed must produce the same simulation result.
 - Game content should be data-driven where practical.
 - Bots must use the same public game actions available to human-controlled players.
+- TFT compatibility should be validated through documented behavioral contracts and the frozen Reference Set Slice rather than assumed from resemblance.
 
 ## Testing rules
 
@@ -38,6 +42,7 @@ This repository is a designer-led, agent-implemented autobattler design laborato
 - Never delete, weaken, or skip a failing test merely to make the suite pass.
 - Run relevant tests after changes.
 - Run the full test suite before declaring a task complete.
+- Once Reference Set Slice tests exist, do not weaken or bypass them to accommodate new original content.
 
 ## Task protocol
 
