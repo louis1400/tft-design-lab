@@ -49,3 +49,19 @@ Record durable decisions here when they would otherwise be easy to forget or acc
 **Why:** The project should reach trustworthy working states quickly and avoid compounding unknowns.
 
 **Implication:** New ideas go to `docs/IDEA_BACKLOG.md` unless the active milestone is explicitly amended.
+
+---
+
+## D-005 — TFT fidelity requires a frozen Reference Set Slice
+
+**Status:** Accepted
+
+**Decision:** This project is not merely a generic TFT-inspired autobattler. Before the lab is trusted for original set design, relevant systems must be calibrated against observable behavior from a fixed historical TFT patch using a limited Reference Set Slice.
+
+**Why:** The designer already knows how TFT feels and needs evidence that the lab is modeling TFT rather than an accidental alternate autobattler. Without calibration, simulation results could be precise but irrelevant because the underlying rules are wrong.
+
+**Implication:** Fidelity becomes a recurring validation track. We will reproduce representative real units, traits, items, board states, and later economy/game-flow scenarios; create golden/reference tests; compare timing, targeting, movement, formulas, event ordering, pacing, and outcome distributions; and explicitly document known mismatches.
+
+**Boundary:** We are validating behavior, not reproducing Riot source code, production assets, backend systems, or every undocumented quirk regardless of design relevance.
+
+**Gate:** Original set implementation must not depend on a subsystem with a known material TFT-fidelity mismatch unless that limitation is explicitly accepted and documented.
